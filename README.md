@@ -18,8 +18,10 @@ Adoptive cell therapy (ACT) using ex vivo-expanded autologous tumor-infiltrating
 
 
 ## Goal of the github
-This github contains the scripts to recapitulate the anaylsis performed for this article. The file run_fullAnalysis_BaseTIL.sh exectues all scripts in the correct order.
+This github contains the scripts to recapitulate the anaylsis performed for this article. 
 
+## Scripts used for the analysis
+The file run_fullAnalysis_BaseTIL.sh exectues all scripts in the correct order.
 
 ### Run cellranger multi
 sbatch ~/BaseTIL_code/Cellranger_multi/run_cellranger/run_cellranger.sh
