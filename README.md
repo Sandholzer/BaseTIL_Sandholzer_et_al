@@ -1,9 +1,23 @@
-# BaseTIL_Sandholzer_et_al
+## Longitudinal profiling of tumor-reactive T cells during TIL therapy reveals resistance linked to co-transfer of Type 17 T cells
+
+Authors: 
+Michael T. Sandholzer1*, Alessia G. Liner1†, Clara Serger1†, Sarp Uzun3, David König1,2,8, Helen Thut1, Reto Ritschard1, Andreas Zingg1, Natalia Rodrigues Mantuano1, Benjamin Kasenda2, Katharina Glatz3, Elisabeth Kappos4, Matthias Matter3, Andreas Holbro6,8, Jakob Passweg6,8, Nina Khanna7,8, Lukas Jeker1,8, Mascha Binder1,2,8, Alfred Zippelius1,2,8, and Heinz Läubli1,2,8*
+Affiliations:
+1Department of Biomedicine, University of Basel and University Hospital Basel, Switzerland.
+2Division of Medical Oncology, University Hospital Basel, Switzerland.
+3Department of Pathology, University Hospital Basel, Switzerland.
+4Departement of Plastic, Reconstructive, Aesthetic and Hand surgery, University Hospital Basel and University of Basel 
+5Division of Dermatology, University Hospital Basel, Switzerland.
+6Division of Hematology, University Hospital Basel, Switzerland.
+7Division of Infectious Diseases, University Hospital Basel, Switzerland.
+8Innovation Focus Cell Therapies, University Hospital Basel, Switzerland
+
+Abstract 
+Adoptive cell therapy (ACT) using ex vivo-expanded autologous tumor-infiltrating lymphocytes (TILs) yields durable responses in metastatic melanoma, yet a significant proportion of patients fail to achieve therapeutic benefit, and the mechanisms driving treatment resistance remain poorly understood. Here, we provide a comprehensive analysis of tumor-reactive T cell dynamics during TIL therapy using single-cell RNA and T cell receptor (TCR) sequencing from seven patients in the phase I BaseTIL trial. Tumor-reactive T cells expanded early during ex vivo TIL production, transitioning from exhausted to effector or memory T cell states. Post-transfer, these cells formed a memory-like reservoir in peripheral blood but reacquired exhaustion markers upon infiltrating metastatic lesions, particularly in non-responders. Responders retained a pool of less differentiated tumor-reactive TILs with stem-like characteristics in tumor lesions post-ACT. In contrast, non-responders exhibited increased proportions of regulatory T cells (Tregs) in both circulation and metastatic lesions, accompanied by an enrichment of Type 17 bystander T cells (Th17 and Tc17) in their TIL infusion products. Using a melanoma mouse model, we demonstrated that the transfer of Th17 cells drives Treg accumulation and significantly impairs tumor control. Our findings offer novel insights into clonal dynamics of TIL therapy and identify Th17-driven Treg expansion as a critical resistance mechanism, highlighting actionable strategies, such as optimizing TIL expansion protocols and targeting Type 17-driven pathways, to enhance ACT efficacy.
 
 
-
-
-
+## Goal of the github
+This github contains the scripts to recapitulate the anaylsis performed for this article. 
 
 
 ## Run cellranger multi
