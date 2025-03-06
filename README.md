@@ -1,7 +1,8 @@
 ## Longitudinal profiling of tumor-reactive T cells during TIL therapy reveals resistance linked to co-transfer of Type 17 T cells
 
-Authors: 
-Michael T. Sandholzer <sup>1*</sup>, Alessia G. Liner1†, Clara Serger1†, Sarp Uzun3, David König1,2,8, Helen Thut1, Reto Ritschard1, Andreas Zingg1, Natalia Rodrigues Mantuano1, Benjamin Kasenda2, Katharina Glatz3, Elisabeth Kappos4, Matthias Matter3, Andreas Holbro6,8, Jakob Passweg6,8, Nina Khanna7,8, Lukas Jeker1,8, Mascha Binder1,2,8, Alfred Zippelius1,2,8, and Heinz Läubli1,2,8*
+Authors:
+Michael T. Sandholzer<sup>1*</sup>, Alessia G. Liner<sup>1†</sup>, Clara Serger<sup>1†</sup>, Sarp Uzun<sup>3</sup>, David König<sup>1,2,8</sup>, Helen Thut<sup>1</sup>, Reto Ritschard<sup>1</sup>, Andreas Zingg<sup>1</sup>, Natalia Rodrigues Mantuano<sup>1</sup>, Benjamin Kasenda<sup>2</sup>, Katharina Glatz<sup>3</sup>, Elisabeth Kappos<sup>4</sup>, Matthias Matter<sup>3</sup>, Andreas Holbro<sup>6,8</sup>, Jakob Passweg<sup>6,8</sup>, Nina Khanna<sup>7,8</sup>, Lukas Jeker<sup>1,8</sup>, Mascha Binder<sup>1,2,8</sup>, Alfred Zippelius<sup>1,2,8</sup>, and Heinz Läubli<sup>1,2,8*</sup>
+
 Affiliations:
 1Department of Biomedicine, University of Basel and University Hospital Basel, Switzerland.
 2Division of Medical Oncology, University Hospital Basel, Switzerland.
