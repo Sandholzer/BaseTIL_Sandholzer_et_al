@@ -1,9 +1,9 @@
-### Longitudinal profiling of tumor-reactive T cells during TIL therapy reveals resistance linked to co-transfer of Type 17 T cells
+# Longitudinal profiling of tumor-reactive T cells during TIL therapy reveals resistance linked to co-transfer of Type 17 T cells
 
-#Authors:
+### Authors:
 Michael T. Sandholzer<sup>1*</sup>, Alessia G. Liner<sup>1†</sup>, Clara Serger<sup>1†</sup>, Sarp Uzun<sup>3</sup>, David König<sup>1,2,8</sup>, Helen Thut<sup>1</sup>, Reto Ritschard<sup>1</sup>, Andreas Zingg<sup>1</sup>, Natalia Rodrigues Mantuano<sup>1</sup>, Benjamin Kasenda<sup>2</sup>, Katharina Glatz<sup>3</sup>, Elisabeth Kappos<sup>4</sup>, Matthias Matter<sup>3</sup>, Andreas Holbro<sup>6,8</sup>, Jakob Passweg<sup>6,8</sup>, Nina Khanna<sup>7,8</sup>, Lukas Jeker<sup>1,8</sup>, Mascha Binder<sup>1,2,8</sup>, Alfred Zippelius<sup>1,2,8</sup>, and Heinz Läubli<sup>1,2,8*</sup>
 
-#Affiliations:
+### Affiliations:
 <sup>1</sup>Department of Biomedicine, University of Basel and University Hospital Basel, Switzerland.
 <sup>2</sup>Division of Medical Oncology, University Hospital Basel, Switzerland.
 <sup>3</sup>Department of Pathology, University Hospital Basel, Switzerland.
@@ -13,7 +13,7 @@ Michael T. Sandholzer<sup>1*</sup>, Alessia G. Liner<sup>1†</sup>, Clara Serge
 <sup>7</sup>Division of Infectious Diseases, University Hospital Basel, Switzerland.
 <sup>8</sup>Innovation Focus Cell Therapies, University Hospital Basel, Switzerland
 
-#Abstract 
+### Abstract 
 Adoptive cell therapy (ACT) using ex vivo-expanded autologous tumor-infiltrating lymphocytes (TILs) yields durable responses in metastatic melanoma, yet a significant proportion of patients fail to achieve therapeutic benefit, and the mechanisms driving treatment resistance remain poorly understood. Here, we provide a comprehensive analysis of tumor-reactive T cell dynamics during TIL therapy using single-cell RNA and T cell receptor (TCR) sequencing from seven patients in the phase I BaseTIL trial. Tumor-reactive T cells expanded early during ex vivo TIL production, transitioning from exhausted to effector or memory T cell states. Post-transfer, these cells formed a memory-like reservoir in peripheral blood but reacquired exhaustion markers upon infiltrating metastatic lesions, particularly in non-responders. Responders retained a pool of less differentiated tumor-reactive TILs with stem-like characteristics in tumor lesions post-ACT. In contrast, non-responders exhibited increased proportions of regulatory T cells (Tregs) in both circulation and metastatic lesions, accompanied by an enrichment of Type 17 bystander T cells (Th17 and Tc17) in their TIL infusion products. Using a melanoma mouse model, we demonstrated that the transfer of Th17 cells drives Treg accumulation and significantly impairs tumor control. Our findings offer novel insights into clonal dynamics of TIL therapy and identify Th17-driven Treg expansion as a critical resistance mechanism, highlighting actionable strategies, such as optimizing TIL expansion protocols and targeting Type 17-driven pathways, to enhance ACT efficacy.
 
 
@@ -21,19 +21,19 @@ Adoptive cell therapy (ACT) using ex vivo-expanded autologous tumor-infiltrating
 This github contains the scripts to recapitulate the anaylsis performed for this article. 
 
 
-# Run cellranger multi
+### Run cellranger multi
 sbatch ~/BaseTIL_code/Cellranger_multi/run_cellranger/run_cellranger.sh
 
-# Run velocyto
+### Run velocyto
 sbatch ~/BaseTIL_code/Cellranger_multi/velocyto/rename_bam_bcmatrix.sh
 sbatch ~/BaseTIL_code/Cellranger_multi/velocyto/run_scVelo_loop.sh
 
-# Run mixcr for alligning bulk TCRseq data
+### Run mixcr for alligning bulk TCRseq data
 sbatch ./TCR_bulk_sequencing/run_mixcr.sh
 Rscript ./TCR_bulk_sequencing/make_metadata.R #creates meta data table to load bulk TCRseq data into immunarch
 
 
-# T cell clustering and splitting into CD4 and CD8
+### T cell clustering and splitting into CD4 and CD8
 Rscript ./BaseTIL_00_createRAW.R
 Rscript ./BaseTIL_01_QC.R
 Rscript ./BaseTIL_02_integration_Tcells.R
@@ -42,7 +42,7 @@ Rscript ./BaseTIL_03b_Subsetting_purification_on_cluster.R
 Rscript ./BaseTIL_04_Subsetting_purification_on_genes.R
 
 
-# Go on with CD8 subset analysis
+### Go on with CD8 subset analysis
 Rscript ./BaseTIL_05_PlottingForAnnotation_CDX.R CD8
 Rscript ./CD8_Plotting/BaseTIL_06_Annotation_CD8.R
 Rscript ./CD8_Plotting/Fig_CD8_Zheng_annotation_heatmap.R
@@ -55,7 +55,7 @@ Rscript ./CD8_Plotting/Fig_CD8_DGE_reactive_in_Timepoint.R
 
 Rscript ./Scenic/save_expression_asLoom.R # saves the filtered gex data for CD8 as loom files per timepoint
 
-# Run scenic per timepoint (full run exeeds processing power)
+### Run scenic per timepoint (full run exeeds processing power)
 sbatch ./Scenic/run_pyScenic_demand.sh Tumor
 sbatch ./Scenic/run_pyScenic_demand.sh PreREP
 sbatch ./Scenic/run_pyScenic_demand.sh Expanded_TILs
@@ -65,12 +65,12 @@ sbatch ./Scenic/run_pyScenic_demand.sh Rebiopsy2
 
 Rscript ./CD8_Plotting/Fig_CD8_scenic_DGE_reactive_in_Timepoint.R # make sure scenic pipeline was executed first
 
-# Plotting on CD8 tumor reactive subset
+### Plotting on CD8 tumor reactive subset
 Rscript ./CD8_Plotting/Fig_CD8_TR_Heatmap_genes_between_Timpoint.R
 Rscript ./CD8_Plotting/Fig_CD8_TR_Signature_testing_per_Timepoint.R
 
 
-# Reclustering and plotting of CD8 tumor-reactive subset
+### Reclustering and plotting of CD8 tumor-reactive subset
 Rscript ./CD8_Plotting/Fig_CD8_TR_reclustering.R
 Rscript ./CD8_Plotting/Fig_CD8_TR_reclustering_plotting.R
 Rscript ./CD8_Plotting/Fig_CD8_TR_Pseudotime.R
@@ -79,7 +79,7 @@ Rscript ./CD8_Plotting/Fig_CD8_TCR_Overlap.R
 Rscript ./CD8_Plotting/Fig_CD8_ExpTIL_Tc17.R  # TIL product subclustering CD8
 
 
-# Go on with CD4 subset analysis
+### Go on with CD4 subset analysis
 Rscript ./BaseTIL_05_PlottingForAnnotation_CDX.R CD4
 Rscript ./CD4_Plotting/BaseTIL_06_Annotation_CD4.R
 Rscript ./CD4_Plotting/Fig_CD4_Zheng_annotation_heatmap.R
@@ -91,13 +91,13 @@ Rscript ./CD4_Plotting/Fig_CD4_DGE_Treg_PrevsPost.R
 Rscript ./CD4_Plotting/Fig_CD4_ExpTIL_Th17.R  # TIL product subclustering CD4
 Rscript ./Fig_Type17_freq_exp.R # Calculate total Type17 frequencies 
 
-# TCR plotting 
+### TCR plotting 
 Rscript ./Fig_Frequency_Tumorreactive.R
 Rscript ./Fig_TCR_richness.R
 Rscript ./Fig_TCR_Overlap.R
 
 
-# Chiffelle et al.
+### Chiffelle et al.
 Rscript ./external_Chiffelle/TIL_act_clustering.R
 Rscript ./external_Chiffelle/TIL_act_CD4_CD8_clustering.R
 Rscript ./external_Chiffelle/PrePost_clustering.R
@@ -106,5 +106,5 @@ Rscript ./external_Chiffelle/Fig_TIL_DGE_Response.R
 Rscript ./external_Chiffelle/Fig_TIL_act_plotting.R
 Rscript ./external_Chiffelle/Fig_TIL_act_CD4CD8_plotting.R
 
-# Thompson et al.
+### Thompson et al.
 Rscript ./external_ThompsonThompson_Th17.R
