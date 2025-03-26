@@ -18,7 +18,7 @@ Adoptive cell therapy (ACT) using ex vivo-expanded autologous tumor-infiltrating
 
 
 ## Goal of the github
-This github contains the scripts to recapitulate the anaylsis performed for this article. 
+This github contains the scripts to recapitulate the anaylsis performed for the manuscript "Longitudinal profiling of tumor-reactive T cells during TIL therapy reveals resistance linked to co-transfer of Type 17 T cells". 
 
 ## Scripts used for the analysis
 The file run_fullAnalysis_BaseTIL.sh exectues all scripts in the correct order.
